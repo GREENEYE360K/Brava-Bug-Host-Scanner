@@ -1,20 +1,33 @@
 #!/bin/bash
 
-echo "Installing your script and dependencies..."
+# Update and upgrade Termux packages
+echo "[*] Updating Termux repositories..."
+pkg update -y
+pkg upgrade -y
 
-# Update the system (optional)
-sudo apt update && sudo apt upgrade -y
+# Install required dependencies
+echo "[*] Installing required dependencies..."
+pkg install -y python
+pkg install -y git
+pkg install -y curl
+pkg install -y clang
+pkg install -y make
 
-# Install dependencies
-sudo apt install -y python3 python3-pip
+# Install Python packages from requirements.txt (if available)
+if [ -f "requirements.txt" ]; then
+    echo "[*] Installing Python dependencies..."
+    pip install -r requirements.txt
+else
+    echo "[*] No requirements.txt file found."
+fi
 
-# Clone your repository
+# Clone the repository
+echo "[*] Cloning the repository..."
 git clone https://github.com/GREENEYE360K/Brava-Bug-Host-Scanner.git
 
-# Navigate to the repository directory
+# Navigate to the project folder
 cd Brava-Bug-Host-Scanner
 
-# Install Python dependencies
-pip3 install -r requirements.txt
-
-echo "Installation complete! You can now use the script. using python main.py command
+# Instructions for user
+echo "[*] Installation complete!"
+echo "[*] You can now run the project using the command: python3 your_script.py"
