@@ -1,5 +1,6 @@
 ## Brava Bug Host Scanner 
-![photo_2025-01-08_10-58-50](https://github.com/user-attachments/assets/157c97e9-87a7-4481-9633-fc21d1490867)
+<img src="[https://example.com/your-image.jpg](https://github.com/user-attachments/assets/b2f87e04-91d5-428b-b0e2-e5f19eac1b70)" width="400" height="300" />
+
 
 ## Install
 
